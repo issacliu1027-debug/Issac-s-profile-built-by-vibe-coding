@@ -295,16 +295,16 @@
     .award-card { flex-direction:column; }
     .nav-links { display:none; }
     /* Phone: microscope figure and the specimen slides sit side by side (no dragging here) */
-    .microscope-container { grid-template-columns:1fr 110px; gap:12px; align-items:center;
+    .microscope-container { grid-template-columns:1fr 128px; gap:8px; align-items:center;
       background: radial-gradient(ellipse at center 30%, rgba(0,229,255,.08) 0%, transparent 60%), linear-gradient(180deg, rgba(124,77,255,.03) 0%, transparent 50%);
-      border:1px solid rgba(0,229,255,.1); border-radius:28px; padding:18px 16px; }
+      border:1px solid rgba(0,229,255,.1); border-radius:28px; padding:12px 10px; }
     /* Remove the two frame boxes so it reads as one unified area */
     .microscope-stage { background:none; border:none; box-shadow:none; border-radius:0; min-height:auto; padding:0; }
     /* Keep the microscope at its normal size */
     .microscope-svg { width:100%; max-width:340px; }
     /* Render the specimen-slides block at its desktop size, then shrink the WHOLE thing
        uniformly with zoom — label, slides and every detail keep identical proportions. */
-    .slide-tray { background:none; border:none; box-shadow:none; border-radius:0; min-height:auto; padding:0; width:300px; zoom:0.36; }
+    .slide-tray { background:none; border:none; box-shadow:none; border-radius:0; min-height:auto; padding:0; width:300px; zoom:0.42; }
     .slide { height:110px; }
     /* Move the instruction below the microscope so it no longer covers it */
     .stage-instruction { position:static; top:auto; left:auto; max-width:none; margin:12px auto 0; text-align:center; }
