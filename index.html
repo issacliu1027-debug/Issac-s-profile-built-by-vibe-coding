@@ -295,14 +295,14 @@
     .award-card { flex-direction:column; }
     .nav-links { display:none; }
     /* Phone: microscope figure and the specimen slides sit side by side (no dragging here) */
-    .microscope-container { grid-template-columns:1fr 150px; gap:12px; align-items:center; }
+    .microscope-container { grid-template-columns:1fr 110px; gap:12px; align-items:center; }
     /* Remove the two frame boxes so it reads as one unified area */
     .microscope-stage { background:none; border:none; box-shadow:none; border-radius:0; min-height:auto; padding:0; }
     /* Keep the microscope at its normal size */
     .microscope-svg { width:100%; max-width:340px; }
     /* Render the specimen-slides block at its desktop size, then shrink the WHOLE thing
        uniformly with zoom — label, slides and every detail keep identical proportions. */
-    .slide-tray { background:none; border:none; box-shadow:none; border-radius:0; min-height:auto; padding:0; width:300px; zoom:0.5; }
+    .slide-tray { background:none; border:none; box-shadow:none; border-radius:0; min-height:auto; padding:0; width:300px; zoom:0.36; }
     .slide { height:110px; }
     /* Move the instruction below the microscope so it no longer covers it */
     .stage-instruction { position:static; top:auto; left:auto; max-width:none; margin:12px auto 0; text-align:center; }
@@ -892,7 +892,7 @@
   const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
   // On phones/tablets there is no drag-and-drop, so guide the user to tap instead.
   if (isTouchDevice && stageInstruction) {
-    stageInstruction.innerHTML = 'Tap a specimen slide to the <span class="highlight-drop">microscope</span> to explore my project!';
+    stageInstruction.innerHTML = 'Tap a specimen slide to explore my project';
   }
 
   monitorClose.addEventListener('click', () => {
