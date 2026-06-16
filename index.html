@@ -295,18 +295,17 @@
     .award-card { flex-direction:column; }
     .nav-links { display:none; }
     /* Phone: microscope figure and the specimen slides sit side by side (no dragging here) */
-    .microscope-container { grid-template-columns:1.55fr 0.65fr; gap:12px; align-items:center; }
+    .microscope-container { grid-template-columns:1fr 150px; gap:12px; align-items:center; }
     /* Remove the two frame boxes so it reads as one unified area */
     .microscope-stage { background:none; border:none; box-shadow:none; border-radius:0; min-height:auto; padding:0; }
-    .slide-tray { background:none; border:none; box-shadow:none; border-radius:0; min-height:auto; padding:0; gap:10px; }
     /* Keep the microscope at its normal size */
     .microscope-svg { width:100%; max-width:340px; }
-    /* Shrink the label proportionally to the smaller slides */
-    .tray-label { font-size:.5rem; letter-spacing:.8px; }
-    .slides-grid { gap:8px; }
-    /* Smaller slides, but keep the original graphic proportions (no distortion) */
-    .slide { height:auto; aspect-ratio:12 / 5; padding:3px; }
-    .slide-coverslip { width:30%; height:auto; aspect-ratio:1; top:20%; }
+    /* Render the specimen-slides block at its desktop size, then shrink the WHOLE thing
+       uniformly with zoom — label, slides and every detail keep identical proportions. */
+    .slide-tray { background:none; border:none; box-shadow:none; border-radius:0; min-height:auto; padding:0; width:300px; zoom:0.5; }
+    .slide { height:110px; }
+    /* Move the instruction below the microscope so it no longer covers it */
+    .stage-instruction { position:static; top:auto; left:auto; max-width:none; margin:12px auto 0; text-align:center; }
     /* When a slide is tapped, expand to full width so the project monitor stays readable */
     .microscope-container:has(.microscope-monitor.active) { grid-template-columns:1fr; gap:24px; align-items:start; }
   }
